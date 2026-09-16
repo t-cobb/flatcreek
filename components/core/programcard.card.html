@@ -1,0 +1,13 @@
+<!-- @dsCard group="Components" viewport="700x300" name="Program Card" subtitle="Program/service summary tile" -->
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../../styles.css"></head>
+<body style="margin:0;padding:24px;background:var(--color-bg)">
+<div id="root"></div>
+<script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+<script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<script>
+const __src = "\nasync function dsLoad(name, path, deps) {\n  deps = deps || {};\n  const res = await fetch(path);\n  let src = await res.text();\n  src = src.replace(/^import[^\\n]*\\n/gm, '');\n  src = src.replace('export function', 'function');\n  const compiled = Babel.transform(src, { presets: [['react', { runtime: 'classic' }]] }).code;\n  const argNames = Object.keys(deps);\n  const argVals = Object.values(deps);\n  const fn = new Function('React', 'useState', 'useRef', 'useEffect', ...argNames, compiled + '\\nreturn ' + name + ';');\n  window.DS = window.DS || {};\n  window.DS[name] = fn(React, React.useState, React.useRef, React.useEffect, ...argVals);\n}\nasync function boot() {\n  await dsLoad('ProgramCard', '../../components/core/ProgramCard.jsx');\n  const { ProgramCard } = window.DS;\n  ReactDOM.createRoot(document.getElementById('root')).render(\n    <div style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:'16px',maxWidth:'620px'}}>\n      <ProgramCard tag=\"Water\" title=\"Water Quality Monitoring\" description=\"Stream sampling across 40 sites district-wide.\" />\n      <ProgramCard tag=\"Land\" title=\"Habitat Conservation\" description=\"Easements and restoration on private land.\" />\n    </div>\n  );\n}\nboot();\n";
+const __compiled = Babel.transform(__src, { presets: [['react', { runtime: 'classic' }]] }).code;
+new Function('React','ReactDOM', __compiled)(React, ReactDOM);
+</script>
+</body></html>
