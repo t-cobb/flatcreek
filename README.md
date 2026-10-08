@@ -10,9 +10,8 @@ These are **design prototypes, not production code**: each page is plain HTML th
 loads React + Babel from a CDN and transpiles the components in `components/` at
 runtime. There is no build step.
 
-Bank Restoration, Willow Park Access, and Ongoing Projects are intentionally placeholders —
-real copy is pending from the client. Thaw Wells is the canonical long-form page;
-treat its structure and voice as the template for the other three.
+Thaw Wells is the canonical long-form page; treat its structure and voice as the
+template for the other project pages (Camenzind Bank Restoration, Willow Park Access).
 
 ## Layout
 
