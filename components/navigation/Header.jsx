@@ -5,7 +5,7 @@ export function Header({ orgName = 'Flat Creek Watershed Improvement District', 
   { label: 'About', href: 'about.html' },
   { label: 'Projects', href: 'projects.html', subLinks: [
     { label: 'Thaw wells', href: 'projects/thaw-wells.html' },
-    { label: 'Bank restoration', href: 'projects/bank-restoration.html' },
+    { label: 'Carmenzind Bank Restoration', href: 'projects/bank-restoration.html' },
     { label: 'Scott Lane', href: 'projects/scott-lane.html' },
     { label: 'Ongoing projects', href: 'projects/ongoing-projects.html' },
   ] },
