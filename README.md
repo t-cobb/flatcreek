@@ -32,4 +32,23 @@ styles.css                                 imports all tokens + global rules
   originals are not in git.
 - `tokens/responsive.css` plus the `fc-*` class hooks carry all the phone/tablet
   adaptation; it was added on top of the handoff bundle, which had none.
-- Marked `noindex` via meta tag and `robots.txt` — not intended for search engines.
+- Marked `noindex` via meta tag and `robots.txt` while the site is in team review, so it is
+  not indexed by search engines.
+- React, ReactDOM and Babel load from jsDelivr at pinned versions with integrity hashes.
+  Bump the version and the `integrity` value together if you ever update them.
+
+## Launching on the domain
+
+After the final review, from the repo root:
+
+```bash
+node scripts/launch.js https://www.fcwid.org
+```
+
+That rewrites the preview URL to the domain in the share-link metadata, removes `noindex`,
+adds canonical links, replaces `robots.txt`, writes `sitemap.xml` and `CNAME`. Then commit
+and push, and point the domain at GitHub Pages in the registrar's DNS (and set the custom
+domain in the repo's Pages settings). Old fcwid.org (Wix) URLs will need redirects.
+
+Also before launch: decide whether the Zoom meeting ID and passcode stay public on the
+Contact page, and add photo credits to the About, Projects and Contact header photos if wanted.
