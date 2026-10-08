@@ -4,7 +4,7 @@ Live at **https://t-cobb.github.io/flatcreek/**
 
 Static preview of the Flat Creek Watershed Improvement District website, for team
 review. See [HANDOFF.md](HANDOFF.md) for the original design brief — design tokens,
-recurring layout patterns, content notes, and which pages are still placeholder.
+recurring layout patterns, content notes, and content notes.
 
 These are **design prototypes, not production code**: each page is plain HTML that
 loads React + Babel from a CDN and transpiles the components in `components/` at

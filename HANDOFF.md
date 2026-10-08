@@ -1,13 +1,17 @@
 > **Note:** this is the original design-handoff brief, preserved verbatim below.
-> It describes the *bundle* it shipped in, so two things it says no longer match
+> It describes the *bundle* it shipped in, so a few things it says no longer match
 > this repo:
 >
 > - **Layout.** The bundle nested pages under `ui_kits/website/`. Here they sit at
 >   the repo root (`index.html`, `about.html`, …) with project pages in `projects/`,
 >   and all relative paths were rewritten to match.
-> - **Unused assets.** It lists `thaw-well-4-creek-valley.jpeg` as a safe-to-skip
->   leftover. It is not — it is the Scott Lane hero. Only `thaw-well-5-drilling.jpeg`
->   is genuinely unused, and it is the one file not carried into this repo.
+> - **Project pages.** The brief calls them Bank Restoration, Scott Lane, and Ongoing
+>   Projects. They are now **Camenzind Bank Restoration**
+>   (`projects/camenzind-bank-restoration.html`) and **Willow Park Access**
+>   (`projects/willow-park-access.html`), both with real copy and photos. Ongoing
+>   Projects was removed.
+> - **Unused assets.** `thaw-well-4-creek-valley.jpeg` and `thaw-well-5-drilling.jpeg`
+>   are unused leftovers. The latter is the one file not carried into this repo.
 >
 > Also note the images here are web re-encodes (max 1800px, JPEG q68). The
 > full-resolution originals are not in git.
@@ -20,24 +24,23 @@
 # Handoff: FCWID Website (Flat Creek Watershed Improvement District)
 
 ## Overview
-A public-facing municipal/special-district website: mission, board/governance, project documentation (thaw wells program, bank restoration, Scott Lane, ongoing projects), a research archive, and contact info. Content and tone are civic/governmental (USWDS-adjacent conventions — official meeting banner, plain factual copy).
+A public-facing municipal/special-district website: mission, board/governance, project documentation (thaw wells program, Camenzind bank restoration, Willow Park Access), a research archive, and contact info. Content and tone are civic/governmental (USWDS-adjacent conventions — official meeting banner, plain factual copy).
 
 ## About the Design Files
 The files in this bundle are **design references built in HTML** — static prototypes (plain HTML + React-via-Babel-in-browser, no build step) showing the intended look, layout, and copy. They are NOT production code to copy verbatim. The task is to **recreate these designs in the target codebase's real environment** (whatever framework/CMS the team uses — static site generator, React app, WordPress theme, etc.), using that environment's own component/routing conventions. If no environment exists yet, pick whatever's simplest for a small civic-org site with occasional content updates (a static site generator with Markdown content is a good fit, given how text-heavy and update-light this is).
 
 ## Fidelity
-**High-fidelity.** Colors, type, spacing, and copy are final/near-final (a few content sections are explicitly marked as placeholder — see below). Recreate pixel-close using the values in Design Tokens.
+**High-fidelity.** Colors, type, spacing, and copy are final/near-final. Recreate pixel-close using the values in Design Tokens.
 
-## Explicit placeholders — do not treat as done
-- **Bank Restoration, Scott Lane, Ongoing Projects** (`projects/bank-restoration.html`, `projects/scott-lane.html`, `projects/ongoing-projects.html`): body copy is a `PlaceholderNote` (dashed border, italic) — real write-ups from the client ("Sandy") are pending.
-- Everything else (Home, About, Thaw Wells, Research Archive, Contact) has real, client-approved copy.
+## Placeholders
+None. Every page has real, client-approved copy.
 
 ## Site Map / Screens
 
 1. **Home** (`index.html`) — Hero (full-bleed photo, scroll-scrubbed `FlowLine` wave underline), mission statement, "Explore" card grid (About / Projects / Research Archive) with hover lift+arrow, board highlight, older-business/updates section.
 2. **About** (`about.html`) — Hero overlay ("Who we are"), mission/why-it-matters copy, board list, meetings info (duplicated contextually — see OfficialBanner below), static `FlowLine` divider.
 3. **Projects** (`projects.html`) — Hero overlay ("Recent work"), centered intro (eyebrow "FCWID Projects" + H1 "Explore our projects" + lede), 4-card grid (equal height, hover lift) linking to project subpages, two-column "Mapped across the district" section (context text + map image in a bordered card).
-4. **Project subpages** (`projects/thaw-wells.html`, `projects/bank-restoration.html`, `projects/scott-lane.html`, `projects/ongoing-projects.html`) — Shared layout: hero overlay (eyebrow "FCWID Project" + title on photo), lede paragraph, then a two-column layout: sticky left rail (`ProjectRail`, 200px, "← All projects" + the 4 project links, current one bold/primary-colored) + article body (max 700px). Thaw Wells is the only fully written page — long-form history with `<h3>` subsections, bulleted recommendations/funding lists, and 6 photos with captions woven through the narrative at specific story beats (see Assets).
+4. **Project subpages** (`projects/thaw-wells.html`, `projects/camenzind-bank-restoration.html`, `projects/willow-park-access.html`) — Shared layout: hero overlay (eyebrow "FCWID Project" + title on photo), lede paragraph, then a two-column layout: sticky left rail (`ProjectRail`, 200px, "← All projects" + the 3 project links, current one bold/primary-colored) + article body (max 700px). Thaw Wells is the long-form page (Camenzind Bank Restoration and Willow Park Access are short, photo-led write-ups) — long-form history with `<h3>` subsections, bulleted recommendations/funding lists, and 6 photos with captions woven through the narrative at specific story beats (see Assets).
 5. **Research Archive** (`research-archive.html`) — Hero overlay ("Technical studies"), intro, archive list content.
 6. **Contact** (`contact.html`) — Hero overlay ("Get in touch"), general-inquiries email line, Board Meetings card (schedule + bordered Zoom-details box with meeting ID/passcode + courthouse-minutes footnote below a divider).
 
@@ -108,7 +111,7 @@ All in `assets/` — carry over as-is (or re-export at whatever resolution the n
 ## Content Notes
 - OfficialBanner meeting line: "Board meetings are the second Thursday of every month, 9 a.m." + Zoom link. Contact page's Board Meetings card additionally shows Meeting ID (883 8734 2641) and Passcode (888921), plus "A complete record of meeting minutes are stored at the Teton county courthouse."
 - Contact: P.O. Box 2037, Jackson, WY 83001; email flatcreek@fcwid.org.
-- Thaw Wells is the canonical long-form copy — treat its structure/voice (plain, factual, dated, named sources) as the template for writing Bank Restoration / Scott Lane / Ongoing Projects once the client's real copy lands.
+- Thaw Wells is the canonical long-form copy — treat its structure/voice (plain, factual, dated, named sources) as the template for any new project pages.
 
 ## Files in This Bundle
 ```
