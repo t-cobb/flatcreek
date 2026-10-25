@@ -1,7 +1,7 @@
-Footer: org identity, optional contact, one-line legal note. One per page.
+Footer: FCWID wordmark followed by the organization name, then a tagline line (blue dot, same as the banner) and a copyright notice. One per page.
 
 ```jsx
 <Footer />
 ```
 
-Phone/email columns only render when passed, keeping the footer lean until real contact info is confirmed.
+Address, email and phone are intentionally not in the footer; they live on the Contact page.

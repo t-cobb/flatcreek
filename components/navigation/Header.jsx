@@ -8,7 +8,7 @@ export function Header({ orgName = 'Flat Creek Watershed Improvement District', 
     { label: 'Camenzind Bank Restoration', href: 'projects/camenzind-bank-restoration.html' },
     { label: 'Willow Park Access', href: 'projects/willow-park-access.html' },
   ] },
-  { label: 'Research Archive', href: 'research-archive.html' },
+  { label: 'Archives', href: 'archives.html' },
   { label: 'Contact', href: 'contact.html' },
 ], homeHref = 'index.html', cta, ctaHref = '#' }) {
   const [hoverIdx, setHoverIdx] = useState(-1);

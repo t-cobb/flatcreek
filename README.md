@@ -17,7 +17,7 @@ template for the other project pages (Camenzind Bank Restoration, Willow Park Ac
 
 ```
 index.html, about.html, projects.html,     top-level pages
-  research-archive.html, contact.html
+  archives.html, contact.html
 projects/                                  three project subpages
 components/                                .jsx source + .prompt.md notes + .d.ts
 tokens/                                    colors, typography, spacing, effects,

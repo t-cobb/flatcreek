@@ -37,16 +37,16 @@ None. Every page has real, client-approved copy.
 
 ## Site Map / Screens
 
-1. **Home** (`index.html`) — Hero (full-bleed photo, scroll-scrubbed `FlowLine` wave underline), mission statement, "Explore" card grid (About / Projects / Research Archive) with hover lift+arrow, board highlight, older-business/updates section.
+1. **Home** (`index.html`) — Hero (full-bleed photo, scroll-scrubbed `FlowLine` wave underline), mission statement, "Explore" card grid (About / Projects / Archives) with hover lift+arrow, board highlight, older-business/updates section.
 2. **About** (`about.html`) — Hero overlay ("Who we are"), mission/why-it-matters copy, board list, meetings info (duplicated contextually — see OfficialBanner below), static `FlowLine` divider.
 3. **Projects** (`projects.html`) — Hero overlay ("Recent work"), centered intro (eyebrow "FCWID Projects" + H1 "Explore our projects" + lede), 4-card grid (equal height, hover lift) linking to project subpages, two-column "Mapped across the district" section (context text + map image in a bordered card).
 4. **Project subpages** (`projects/thaw-wells.html`, `projects/camenzind-bank-restoration.html`, `projects/willow-park-access.html`) — Shared layout: hero overlay (eyebrow "FCWID Project" + title on photo), lede paragraph, then a two-column layout: sticky left rail (`ProjectRail`, 200px, "← All projects" + the 3 project links, current one bold/primary-colored) + article body (max 700px). Thaw Wells is the long-form page (Camenzind Bank Restoration and Willow Park Access are short, photo-led write-ups) — long-form history with `<h3>` subsections, bulleted recommendations/funding lists, and 6 photos with captions woven through the narrative at specific story beats (see Assets).
-5. **Research Archive** (`research-archive.html`) — Hero overlay ("Technical studies"), intro, archive list content.
+5. **Archives** (`archives.html`) — Hero overlay ("Archives" with the tagline "Our Technical Studies and Reports"), intro, a card grid of the study PDFs (hosted in `assets/studies/`).
 6. **Contact** (`contact.html`) — Hero overlay ("Get in touch"), general-inquiries email line, Board Meetings card (schedule + bordered Zoom-details box with meeting ID/passcode + courthouse-minutes footnote below a divider).
 
 ## Global Chrome (every page)
 - **OfficialBanner** (top strip, dark, small text): meeting schedule line + "Join via Zoom" link. Always the very first element in `<body>`.
-- **Header**: FCWID wordmark (Newsreader, bold, with the `FlowLine` SVG wave underline) linking home + nav (About / Projects / Research Archive / Contact). "Projects" has a hover dropdown (fade+slide, ~160ms, closes on a short delay to avoid flicker) listing the 4 project subpages. No standalone "Home" link — logo is home.
+- **Header**: FCWID wordmark (Newsreader, bold, with the `FlowLine` SVG wave underline) linking home + nav (About / Projects / Archives / Contact). "Projects" has a hover dropdown (fade+slide, ~160ms, closes on a short delay to avoid flicker) listing the 4 project subpages. No standalone "Home" link — logo is home.
 - **Footer**: dark (`--ink-900` bg), wordmark + org name + address (P.O. Box 2037, Jackson, WY 83001), contact column (phone/email), bottom strip "A special district in Teton County, Wyoming."
 
 ## Components (see `components/` folder in this bundle for full source + `.prompt.md` design notes for each)
