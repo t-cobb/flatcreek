@@ -1,2 +1,6 @@
 User-agent: *
-Disallow: /
+Allow: /
+Disallow: /components/
+Disallow: /tokens/
+
+Sitemap: https://www.fcwid.org/sitemap.xml
